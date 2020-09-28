@@ -1,0 +1,423 @@
+:root {
+  --blanco: #ffffff;
+  --gris1: #edf2f6;
+  --gris2: #2f3848;
+  --gris3: #1a202d;
+  --negro: #000000;
+  --headingFont:'Raleway', sans-serif;
+  --textFont:  'Roboto', sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 62.5%; 
+}
+
+body {
+  min-height: 100%;
+  background-color: var(--gris1);
+  font-size: 16px; 
+  font-size: 1.6rem;
+  font-family: var(--textFont);
+}
+
+.contenedor-usuario {
+  background-color: var(--gris2);
+  height: 100vh;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor-formulario {
+  padding: 4rem 3rem;
+  max-width: 500px;
+  width: 95%;
+  background-color: var(--blanco);
+  border-radius: 1rem;
+}
+
+h1 {
+  font-family: var(--headingFont);
+  font-weight: 900;
+  margin-bottom: 4rem;
+  text-align: center;
+  color: var(--gris2);
+  font-size: 3rem;
+}
+h1 span {
+  font-weight: 400;
+}
+
+.campo-formulario {
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.campo-form:last-of-type {
+  margin: 0;
+}
+
+.campo-formulario label {
+  flex: 0 0 100px;
+  font-family: var(--textFont);
+}
+
+.campo-formulario input[type="password"],
+.campo-formulario input[type="email"], 
+.campo-formulario input[type="text"] {
+  border: 1px solid #e1e1e1;
+  padding: 1rem;
+  flex: 1;
+}
+
+.btn1 {
+  margin-top: 2rem;
+  font-family: var(--headingFont);
+  padding: 1.5rem;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: .5rem;
+  border: none;
+  background-color: var(--gris2);
+  color: var(--blanco);
+  transition: background-color .3s ease;
+}
+
+.btn1:hover {
+  cursor: pointer;
+  background: var(--gris3);
+}
+
+.btn2 {
+  font-family: var(--headingFont);
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  margin-top: 1.5rem;
+  text-align: left;
+  padding: .2rem;
+  display: block;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.btn2:hover{
+  cursor: pointer;
+}
+
+.btn2:focus{
+  outline: none;
+}
+
+.count{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.count p {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.count .enlace-cuenta {
+  display: inline-block;
+  color: var(--gris3);
+  margin-left: 1rem;
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+@media (min-width: 769px) {
+  .contenedor-app {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  aside {
+    background-color: var(--blanco);
+    flex: 0 0 300px;
+  }
+  .seccion-principal {
+    flex: 1;
+  }
+  
+  .contenedor-tareas {
+    padding: 4rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+aside  {
+  padding: 3rem;
+}
+
+.proyectos {
+  margin-top: 8rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-family: var(--headingFont);
+  font-weight: 900;
+  margin-bottom: 4rem;
+  text-align: center;
+  color: var(--gris2);
+}
+
+.formulario-nuevo-proyecto {
+  margin-top: 6rem;
+}
+
+.formulario-nuevo-proyecto .input-text {
+  border: none;
+  border-bottom: 1px solid var(--gris2);
+  background-color: var(--gris1);
+  padding: 1rem;
+  width: 100%;
+}
+
+.formulario-nuevo-proyecto .input-text::placeholder{
+  color: var(--gris2);
+}
+
+.formulario-nuevo-proyecto .input-text:focus{
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--gris2);
+  font-size: 2rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--gris2);
+  padding: 4rem;
+}
+
+.nombre-usuario {
+  color: var(--blanco);
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.nombre-usuario span {
+  font-weight: 900;
+}
+
+.nav-principal a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.nav-principal a:first-of-type {
+  margin-right: 2rem;
+}
+
+/** Formulario crear y editar tareas **/
+ .formulario {
+  background-color: var(--gris3);
+  padding: 4rem;
+}
+.formulario form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contenedor-input {
+  display: flex;
+}
+
+.input-text {
+  padding: 1.3rem;
+  border: none;
+  border-radius: .5rem;
+  flex: 1;
+  width: 100%;
+}
+.input-text:focus{
+  outline: none;
+}
+.contenedor-input .btn1:hover {
+  cursor: pointer;
+  background: var(--gris1);
+  color: var(--gris2);
+}
+
+.tarea {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--blanco);
+  padding: .5rem 2rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+}
+
+.sombra {
+  box-shadow: 0px 4px 10px -3px rgba(117,117,117,1);
+}
+
+.completo, .correcto {
+  background-color: rgba(154, 252, 154, .3);
+  color: var(--gris3);
+}
+
+.incompleto{
+  background-color: rgba(255, 178, 178, .4);
+  color: var(--gris3);
+}
+
+.btn3 {
+  font-family: var(--headingFont);
+  padding: .75rem;
+  border: none;
+  font-size: 1.25rem;
+  border-radius: .5rem;
+  background-color: var(--gris2);
+  color: var(--blanco);
+  margin-right: 1rem; 
+} 
+
+.estado button, .mensaje {
+  font-weight: 900;
+  font-family: var(--textFont);
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  border: none;
+  margin-right: 1.5rem;
+}
+
+.mensaje {
+  text-align: center;
+  font-size: 1.6rem;
+  border-radius: 0;
+}
+
+.mensaje:hover {
+  cursor: default;
+}
+
+.error {
+  max-width: 600px;
+  font-size: 1.75rem;
+  margin: 2rem auto 0 auto;
+  color: red;
+}
+
+.error2 {
+  max-width: 600px;
+  font-size: 1.85rem;
+  color: red;
+  margin-bottom: 3rem;
+  margin-top: 0;
+  text-align: center;
+}
+
+.tarea-enter,
+.proyecto-enter {
+  opacity: 0;
+}
+.tarea-enter-active,
+.proyecto-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.tarea-exit,
+.proyecto-exit {
+  opacity: 1;
+}
+.tarea-exit-active,
+.proyecto-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}  
+
+.contenedor-input label {
+  margin-bottom: 1rem;
+  color: var(--blanco);
+} */
+
+/*- BARRA LATERAL -*/
+
+.listado-proyectos li {
+  margin-bottom: 2rem;
+}
+.listado-proyectos li a {
+  font-size: 1.4rem;
+  color: var(--gris2);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/** TAREAS LISTADO **/
+
+.listado-tareas {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.sombra-dark {
+  -webkit-box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
+  box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
+}
+
+.tarea p {
+  font-size: 1.6rem;
+  flex: 1;
+  padding-right: 2rem;
+}
+.tarea .btn {
+  padding: .8rem;
+  font-size:1.4rem;
+  border-radius: 0;
+  margin: 0;
+}
+
+.alerta-error {
+  font-size: 1.85rem;
+  color: red;
+  background-color: var(--gris1);
+  text-align: center;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.cerrar-sesion{
+  font-size: 1.9rem;
+  border: none;
+  text-align: left;
+  background-color: transparent;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.cerrar-sesion:focus{
+  outline: none;
+}
